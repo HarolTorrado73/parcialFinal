@@ -1,0 +1,23 @@
+# Archivos compilados
+bin/
+
+# Archivos de IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log 

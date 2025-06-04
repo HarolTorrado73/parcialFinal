@@ -1,0 +1,142 @@
+@startuml
+' Diagrama de Clases
+skinparam classAttributeIconSize 0
+
+class Producto {
+  -nombre: String
+  -precio: double
+  -stock: int
+  -categoria: String
+  +Producto(nombre, precio, stock, categoria)
+  +getNombre(): String
+  +getPrecio(): double
+  +getStock(): int
+  +getCategoria(): String
+  +setStock(stock: int): void
+  +toString(): String
+}
+
+class Carrito {
+  -productos: List<Producto>
+  -total: double
+  +Carrito()
+  +agregarProducto(producto: Producto): void
+  +mostrarCarrito(): void
+  +vaciarCarrito(): void
+  +getTotal(): double
+}
+
+class Supermercado {
+  -inventario: List<Producto>
+  -carrito: Carrito
+  -scanner: Scanner
+  +Supermercado()
+  +iniciar(): void
+  -mostrarMenu(): void
+  -obtenerOpcion(): int
+  -mostrarInventario(): void
+  -agregarAlCarrito(): void
+  -realizarCompra(): void
+}
+
+Supermercado "1" --> "1" Carrito
+Supermercado "1" --> "*" Producto
+Carrito "1" --> "*" Producto
+@enduml
+
+@startuml
+' Diagrama de Casos de Uso
+left to right direction
+skinparam packageStyle rectangle
+
+actor Usuario
+
+rectangle "Supermercado Virtual" {
+  usecase "Ver Inventario" as UC1
+  usecase "Agregar al Carrito" as UC2
+  usecase "Ver Carrito" as UC3
+  usecase "Realizar Compra" as UC4
+  usecase "Vaciar Carrito" as UC5
+  usecase "Salir del Sistema" as UC6
+}
+
+Usuario --> UC1
+Usuario --> UC2
+Usuario --> UC3
+Usuario --> UC4
+Usuario --> UC5
+Usuario --> UC6
+@enduml
+
+@startuml
+' Diagrama de Secuencia
+actor Usuario
+participant "Supermercado" as S
+participant "Carrito" as C
+participant "Producto" as P
+
+Usuario -> S: Iniciar Sesión
+S -> S: Mostrar Menú
+Usuario -> S: Seleccionar "Agregar al Carrito"
+S -> S: Mostrar Inventario
+Usuario -> S: Seleccionar Producto
+S -> P: Verificar Stock
+P --> S: Stock Disponible
+S -> C: Agregar Producto
+C -> P: Actualizar Stock
+C --> S: Confirmar Agregado
+S --> Usuario: Mostrar Mensaje de Éxito
+@enduml
+
+@startuml
+' Diagrama de Estados
+[*] --> Disponible
+Disponible --> EnCarrito: Agregar al Carrito
+EnCarrito --> Disponible: Remover del Carrito
+EnCarrito --> Vendido: Realizar Compra
+Vendido --> [*]
+Disponible --> Agotado: Stock = 0
+Agotado --> Disponible: Reponer Stock
+@enduml
+
+@startuml
+' Diagrama de Componentes
+package "Interfaz de Usuario" {
+  [Supermercado] as S
+}
+
+package "Lógica de Negocio" {
+  [Carrito] as C
+  [Producto] as P
+}
+
+S --> C
+S --> P
+C --> P
+@enduml
+
+@startuml
+' Diagrama de Actividad
+start
+:Mostrar Menú;
+if (Selección Usuario) then (Ver Inventario)
+  :Mostrar Productos;
+else if (Agregar al Carrito)
+  :Seleccionar Producto;
+  if (Verificar Stock) then (Disponible)
+    :Agregar al Carrito;
+  else (No Disponible)
+    :Mostrar Error;
+  endif
+else if (Ver Carrito)
+  :Mostrar Contenido;
+else if (Realizar Compra)
+  :Confirmar Compra;
+  :Actualizar Inventario;
+  :Vaciar Carrito;
+else (Salir)
+  stop
+endif
+:Volver al Menú;
+stop
+@enduml 
