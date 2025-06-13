@@ -28,7 +28,7 @@ En la actualidad, la digitalización de los procesos de compra se ha vuelto fund
 1. **Desarrollar un sistema de gestión de compras en línea mediante interfaz de consola**
    - Crear una interfaz intuitiva y fácil de usar
    - Implementar un sistema de navegación claro
-   - Asegurar la usabilidad del sistema
+   - Asegurar la usabilidad del sistemas
 
 2. **Implementar un sistema robusto de gestión de inventario**
    - Control de stock en tiempo real
@@ -432,15 +432,34 @@ El proyecto "Supermercado Virtual" demuestra la implementación exitosa de un si
    - IDE compatible con Java
    - Sistema operativo: Windows/Linux/MacOS
 
-2. **Compilación:**
+2. **Estructura del Proyecto:**
+   ```
+   supermercado-virtual/
+   ├── src/           # Código fuente
+   ├── bin/           # Archivos compilados (se genera al compilar)
+   ├── docs/          # Documentación
+   └── .gitignore     # Configuración de Git
+   ```
+
+3. **Compilación:**
    ```bash
+   # Crear directorio bin si no existe
+   mkdir bin
+   
+   # Compilar el código
    javac -d bin src/*.java
    ```
 
-3. **Ejecución:**
+4. **Ejecución:**
    ```bash
    java -cp bin Supermercado
    ```
+
+5. **Notas Importantes:**
+   - La carpeta `bin/` no se incluye en el repositorio Git
+   - Se debe crear manualmente al compilar el proyecto
+   - Contiene los archivos `.class` compilados
+   - Se regenera cada vez que se compila el proyecto
 
 ### B. Guía de Usuario
 1. **Ver Inventario (Opción 1)**

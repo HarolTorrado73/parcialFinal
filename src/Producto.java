@@ -12,11 +12,12 @@ public class Producto {
     }
 
     // Getters y Setters
+    //Clases
     public String getNombre() { return nombre; }
     public double getPrecio() { return precio; }
     public int getStock() { return stock; }
     public String getCategoria() { return categoria; }
-
+    //Atributos
     public void setStock(int stock) { this.stock = stock; }
 
     @Override
