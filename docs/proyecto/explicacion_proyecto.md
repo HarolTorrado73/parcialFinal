@@ -76,7 +76,7 @@ public class Producto {
         this.categoria = categoria;
     }
 
-    // Getters y Setters
+    // Getters y Setters  (encapsulamiento)
     public String getNombre() { return nombre; }
     public double getPrecio() { return precio; }
     public int getStock() { return stock; }

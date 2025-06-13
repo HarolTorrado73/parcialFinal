@@ -8,7 +8,7 @@ public class Supermercado {
     private Scanner scanner;
 
     public Supermercado() {
-        this.inventario = new ArrayList<>();
+        this.inventario = new ArrayList<>(); //lista vacia
         this.carrito = new Carrito();
         this.scanner = new Scanner(System.in);
         inicializarInventario();
@@ -88,14 +88,15 @@ public class Supermercado {
 
     private int obtenerOpcion() {
         try {
-            return Integer.parseInt(scanner.nextLine().trim());
+            return Integer.parseInt(scanner.nextLine().trim()); //elimina espacios innecesarios con .trim().
+
         } catch (NumberFormatException e) {
             return -1;
         }
     }
 
     private void mostrarInventario() {
-        if (inventario.isEmpty()) {
+        if (inventario.isEmpty()) { //es más limpio y más fácil de leer que hacer algo como size() == 0
             System.out.println("❌ No hay productos en el inventario");
             return;
         }
@@ -135,7 +136,7 @@ public class Supermercado {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Punto de entrada de la aplicación
         Supermercado supermercado = new Supermercado();
         supermercado.iniciar();
     }
