@@ -4,21 +4,25 @@
 
 ### Presentadores y Roles
 
-1. **Arquitecto del Sistema** - [Nombre del Presentador 1]
+1. **Arquitecto del Sistema** - Daniel Leandro Ascanio (192468)
    - Responsable de la introducción y visión general
    - Explicará el problema y la solución general
+   - Como Diseñador y Analista, presentará la arquitectura del sistema
 
-2. **Modelador de Datos** - [Nombre del Presentador 2]
+2. **Modelador de Datos** - Shary Torcoroma Jimenez (192467)
    - Presentará la clase `Producto.java`
    - Explicará el modelado de datos y la gestión del stock
+   - Como Analista y Documentadora, detallará la estructura de datos
 
-3. **Gestor de Compras** - [Nombre del Presentador 3]
+3. **Gestor de Compras** - Angie Daniela Ramirez (192491)
    - Presentará la clase `Carrito.java`
    - Explicará la lógica de compras y gestión del carrito
+   - Como Desarrolladora, mostrará la implementación del carrito
 
-4. **Coordinador del Supermercado** - [Nombre del Presentador 4]
+4. **Coordinador del Supermercado** - Harol Camilo Melo (192471)
    - Presentará la clase `Supermercado.java`
    - Explicará la interacción entre componentes
+   - Como Desarrollador y tester, demostrará el funcionamiento del sistema
 
 ### Diagrama UML
 Para una mejor comprensión de la arquitectura del sistema, hemos incluido un diagrama UML detallado en el archivo `diagrama_uml.md`. Este diagrama muestra las relaciones entre las clases y sus principales atributos y métodos.
