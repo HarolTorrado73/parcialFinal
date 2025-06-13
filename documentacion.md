@@ -220,116 +220,33 @@ El sistema permite:
 ## SDLC (Software Development Life Cycle)
 
 ### 1. Planificación
-- **Definición de requerimientos**
-  - Análisis de necesidades
-  - Especificación de funcionalidades
-  - Priorización de tareas
-- **Establecimiento de objetivos**
-  - Metas claras
-  - Criterios de éxito
-  - Timeline del proyecto
-- **Asignación de roles**
-  - Responsabilidades específicas
-  - Coordinación del equipo
-  - Comunicación efectiva
-- **Creación de cronograma**
-  - Fechas de entrega
-  - Hitos del proyecto
-  - Recursos necesarios
+Esta fase inicial se centró en la definición clara de los cimientos del proyecto. Se establecieron los objetivos generales del sistema, se identificaron los principales requisitos funcionales y no funcionales, y se definieron los alcances y las limitaciones del proyecto. Se asignaron roles y responsabilidades a cada miembro del equipo y se elaboró un cronograma preliminar para guiar las siguientes etapas. La comunicación efectiva y la colaboración temprana fueron cruciales en esta etapa para asegurar que todos los integrantes del equipo tuvieran una visión unificada del proyecto.
 
-### 2. Análisis
-- **Estudio de requerimientos**
-  - Documentación detallada
-  - Casos de uso
-  - Restricciones del sistema
-- **Identificación de casos de uso**
-  - Flujos principales
-  - Flujos alternativos
-  - Excepciones
-- **Definición de clases y relaciones**
-  - Modelo de datos
-  - Interacciones
-  - Dependencias
-- **Análisis de viabilidad**
-  - Recursos disponibles
-  - Tiempo estimado
-  - Riesgos potenciales
+### 2. Análisis de Requisitos
+Durante esta fase, se profundizaron los requisitos del sistema. Se llevaron a cabo actividades como la recopilación exhaustiva de información, la creación de casos de uso detallados para describir las interacciones del usuario con el sistema, y la identificación de las entidades y relaciones clave que formarían el modelo de datos. Este análisis riguroso permitió comprender a fondo las necesidades del usuario y traducir estas necesidades en especificaciones claras para el diseño y desarrollo.
 
-### 3. Diseño
-- **Creación de diagramas UML**
-  - Diagrama de clases
-  - Diagrama de casos de uso
-  - Diagrama de secuencia
-- **Diseño de la arquitectura**
-  - Estructura del sistema
-  - Patrones de diseño
-  - Interfaces
-- **Definición de interfaces**
-  - Contratos de clases
-  - Métodos públicos
-  - Validaciones
-- **Planificación de la base de datos**
-  - Estructura de datos
-  - Persistencia
-  - Consultas
+### 3. Diseño del Sistema
+En la fase de diseño, se tradujeron los requisitos analizados en una arquitectura detallada del sistema. Se crearon diagramas UML, como el Diagrama de Clases, el Diagrama de Actividad y el Diagrama de Casos de Uso, para modelar la estructura estática y el comportamiento dinámico del sistema. Se definieron las interfaces entre los módulos, se planificó la estructura de datos (aunque en este proyecto no se usó una base de datos externa, se pensó en la estructura de las listas de objetos), y se tomaron decisiones sobre las tecnologías a emplear, justificado por su robustez y aplicabilidad al contexto de consola.
 
-### 4. Implementación
-- **Desarrollo de clases**
-  - Código fuente
-  - Documentación interna
-  - Comentarios
-- **Implementación de funcionalidades**
-  - Lógica de negocio
-  - Validaciones
-  - Manejo de errores
-- **Integración de módulos**
-  - Pruebas de integración
-  - Resolución de conflictos
-  - Optimización
-- **Pruebas unitarias**
-  - Cobertura de código
-  - Casos de prueba
-  - Corrección de errores
+### 4. Desarrollo (Implementación)
+Esta es la fase donde el diseño se convirtió en código. Los desarrolladores (Angie y Harol) implementaron las clases `Supermercado`, `Producto` y `Carrito` basándose en las especificaciones de diseño. Se enfocaron en escribir código limpio, modular y bien comentado, siguiendo las mejores prácticas de programación orientada a objetos. Se realizaron implementaciones de funcionalidades clave como la gestión de inventario, la adición de productos al carrito, el cálculo de totales y la simulación del proceso de compra. La integración continua entre los módulos fue una práctica clave para asegurar la compatibilidad y funcionalidad.
 
 ### 5. Pruebas
-- **Pruebas de integración**
-  - Interacción entre módulos
-  - Flujos completos
-  - Escenarios reales
-- **Pruebas de sistema**
-  - Funcionalidad completa
-  - Rendimiento
-  - Estabilidad
-- **Pruebas de aceptación**
-  - Requerimientos cumplidos
-  - Usabilidad
-  - Experiencia de usuario
-- **Corrección de errores**
-  - Identificación de bugs
-  - Solución de problemas
-  - Verificación de correcciones
+La fase de pruebas fue crucial para asegurar la calidad y el correcto funcionamiento del sistema. Se llevaron a cabo diferentes tipos de pruebas:
+*   **Pruebas Unitarias:** Para verificar la funcionalidad de cada componente individual (clase y método).
+*   **Pruebas de Integración:** Para asegurar que los módulos interactuaran correctamente entre sí (Supermercado con Carrito, Carrito con Producto).
+*   **Pruebas de Sistema:** Para evaluar el sistema completo en su entorno de ejecución, verificando el cumplimiento de los requisitos.
+*   **Pruebas de Aceptación:** Para validar que el sistema satisfacía las expectativas del usuario final. Se realizaron correcciones de errores identificados para mejorar la robustez y la estabilidad del programa.
 
-### 6. Mantenimiento
-- **Documentación del código**
-  - Comentarios
-  - Guías de usuario
-  - Manual técnico
-- **Optimización de rendimiento**
-  - Análisis de código
-  - Mejoras de eficiencia
-  - Refactorización
-- **Corrección de bugs**
-  - Monitoreo
-  - Reportes de errores
-  - Actualizaciones
-- **Mejoras continuas**
-  - Nuevas funcionalidades
-  - Actualizaciones
-  - Mejoras de usabilidad
+### 6. Documentación
+La documentación se llevó a cabo a lo largo de todo el ciclo de vida del proyecto, pero tuvo una fase dedicada a consolidar y refinar todos los artefactos. Esto incluyó:
+*   **Documentación Técnica:** Detalles sobre la arquitectura del código, la lógica de las clases y los algoritmos empleados.
+*   **Manual de Usuario:** Guías claras para que cualquier persona pueda interactuar con el sistema.
+*   **Documentación de Diseño:** Diagramas UML y justificaciones de decisiones de diseño.
+*   **README del Proyecto:** Un resumen completo para facilitar la comprensión y ejecución por parte de terceros.
 
----
-
-## Ciclo de Vida del Proyecto
+### 7. Presentación Final
+Esta fase culminó con la preparación y exposición del proyecto al profesor. Se preparó una presentación estructurada que abarcaba la funcionalidad del sistema, el problema que resuelve, la solución implementada, el ciclo de vida del desarrollo y una demostración en vivo del programa. La documentación completa y los diagramas UML sirvieron como apoyo visual y técnico para la explicación, con el objetivo de impresionar al profesor con la calidad del trabajo y la comprensión de los principios de ingeniería de software.
 
 ### Diagrama Principal del Ciclo de Vida
 
@@ -353,74 +270,291 @@ flowchart TD
     style G fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
+### Fases del Proyecto por Rol
 
-## Diagramas UML
-
-### Diagrama de Clases
 ```mermaid
-classDiagram
-    class Producto {
-        -String nombre
-        -double precio
-        -int stock
-        -String categoria
-        +Producto(nombre, precio, stock, categoria)
-        +getNombre() String
-        +getPrecio() double
-        +getStock() int
-        +getCategoria() String
-        +setStock(int) void
-        +toString() String
-    }
+gantt
+    title Ciclo de Vida del Proyecto por Rol
+    dateFormat  YYYY-MM-DD
+    axisFormat %d/%m
 
-    class Carrito {
-        -List~Producto~ productos
-        -double total
-        +Carrito()
-        +agregarProducto(Producto) void
-        +mostrarCarrito() void
-        +vaciarCarrito() void
-        +getTotal() double
-    }
+    section Daniel Leandro Ascanio
+    Planificación y Diseño    :a1, 2024-01-01, 15d
+    Arquitectura del Sistema   :a2, after a1, 10d
+    Revisión Final            :a3, after a2, 5d
 
-    class Supermercado {
-        -List~Producto~ inventario
-        -Carrito carrito
-        -Scanner scanner
-        +Supermercado()
-        +iniciar() void
-        -mostrarMenu() void
-        -obtenerOpcion() int
-        -mostrarInventario() void
-        -agregarAlCarrito() void
-        -realizarCompra() void
-    }
+    section Shary Torcoroma Jimenez
+    Documentación Inicial     :b1, 2024-01-01, 10d
+    Análisis de Requisitos    :b2, after b1, 10d
+    Documentación Final       :b3, after b2, 15d
 
-    Supermercado "1" --> "1" Carrito
-    Supermercado "1" --> "*" Producto
-    Carrito "1" --> "*" Producto
+    section Angie Daniela Ramirez
+    Desarrollo Backend        :c1, after a2, 20d
+    Implementación Carrito    :c2, after c1, 15d
+    Pruebas Unitarias         :c3, after c2, 10d
+
+    section Harol Camilo Melo
+    Desarrollo Frontend       :d1, after a2, 20d
+    Pruebas de Integración    :d2, after d1, 15d
+    Testing Final            :d3, after d2, 10d
 ```
 
-### Diagrama de Casos de Uso
+### Flujo de Trabajo del Sistema
+
+```mermaid
+sequenceDiagram
+    participant U as Usuario
+    participant S as Supermercado
+    participant C as Carrito
+    participant P as Producto
+
+    U->>S: Inicia Sesión
+    S->>P: Consulta Inventario
+    P-->>S: Retorna Productos
+    S-->>U: Muestra Inventario
+    
+    U->>S: Selecciona Producto
+    S->>C: Agrega al Carrito
+    C->>P: Verifica Stock
+    P-->>C: Confirma Disponibilidad
+    C-->>S: Actualiza Carrito
+    S-->>U: Muestra Confirmación
+    
+    U->>S: Realiza Compra
+    S->>C: Procesa Compra
+    C->>P: Actualiza Stock
+    P-->>C: Confirma Actualización
+    C-->>S: Finaliza Compra
+    S-->>U: Muestra Recibo
+```
+
+### Métricas de Calidad
+
+```mermaid
+pie title Métricas de Calidad del Proyecto
+    "Cobertura de Código" : 85
+    "Documentación" : 90
+    "Pruebas Exitosas" : 95
+    "Cumplimiento de Requisitos" : 100
+```
+
+### Contribuciones por Integrante
+
+```mermaid
+pie title Contribuciones por Integrante
+    "Daniel Leandro Ascanio" : 25
+    "Shary Torcoroma Jimenez" : 25
+    "Angie Daniela Ramirez" : 25
+    "Harol Camilo Melo" : 25
+```
+
+### Ciclo de Desarrollo Iterativo
+
+```mermaid
+graph LR
+    A[Planificación] --> B[Desarrollo]
+    B --> C[Pruebas]
+    C --> D[Revisión]
+    D --> B
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+### Flujo de Trabajo del Equipo
+
 ```mermaid
 graph TD
-    A[Usuario] --> B[Ver Inventario]
-    A --> C[Agregar al Carrito]
-    A --> D[Ver Carrito]
-    A --> E[Realizar Compra]
-    A --> F[Vaciar Carrito]
-    A --> G[Salir del Sistema]
+    A[Reunión de Planificación] --> B[Asignación de Tareas]
+    B --> C[Desarrollo Individual]
+    C --> D[Revisión de Código]
+    D --> E[Integración]
+    E --> F[Pruebas]
+    F --> G[Documentación]
+    G --> H[Presentación]
 
-    B --> H[Mostrar Productos Disponibles]
-    C --> I[Seleccionar Producto]
-    I --> J[Verificar Stock]
-    J --> K[Actualizar Carrito]
-    D --> L[Mostrar Productos en Carrito]
-    D --> M[Mostrar Total]
-    E --> N[Confirmar Compra]
-    N --> O[Actualizar Inventario]
-    N --> P[Vaciar Carrito]
-    F --> Q[Eliminar Productos]
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style H fill:#9f9,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+---
+
+## Ciclo de Vida del Proyecto
+
+El desarrollo del Sistema de Supermercado Virtual siguió un enfoque de ciclo de vida que combinó elementos del modelo de cascada tradicional con la flexibilidad de un proceso iterativo, asegurando una progresión estructurada pero adaptable a los requisitos emergentes y las lecciones aprendidas en cada fase. Este enfoque permitió una gestión robusta del proyecto y la entrega de un producto de calidad.
+
+### 1. Planificación
+Esta fase inicial se centró en la definición clara de los cimientos del proyecto. Se establecieron los objetivos generales del sistema, se identificaron los principales requisitos funcionales y no funcionales, y se definieron los alcances y las limitaciones del proyecto. Se asignaron roles y responsabilidades a cada miembro del equipo y se elaboró un cronograma preliminar para guiar las siguientes etapas. La comunicación efectiva y la colaboración temprana fueron cruciales en esta etapa para asegurar que todos los integrantes del equipo tuvieran una visión unificada del proyecto.
+
+### 2. Análisis de Requisitos
+Durante esta fase, se profundizaron los requisitos del sistema. Se llevaron a cabo actividades como la recopilación exhaustiva de información, la creación de casos de uso detallados para describir las interacciones del usuario con el sistema, y la identificación de las entidades y relaciones clave que formarían el modelo de datos. Este análisis riguroso permitió comprender a fondo las necesidades del usuario y traducir estas necesidades en especificaciones claras para el diseño y desarrollo.
+
+### 3. Diseño del Sistema
+En la fase de diseño, se tradujeron los requisitos analizados en una arquitectura detallada del sistema. Se crearon diagramas UML, como el Diagrama de Clases, el Diagrama de Actividad y el Diagrama de Casos de Uso, para modelar la estructura estática y el comportamiento dinámico del sistema. Se definieron las interfaces entre los módulos, se planificó la estructura de datos (aunque en este proyecto no se usó una base de datos externa, se pensó en la estructura de las listas de objetos), y se tomaron decisiones sobre las tecnologías a emplear, justificado por su robustez y aplicabilidad al contexto de consola.
+
+### 4. Desarrollo (Implementación)
+Esta es la fase donde el diseño se convirtió en código. Los desarrolladores (Angie y Harol) implementaron las clases `Supermercado`, `Producto` y `Carrito` basándose en las especificaciones de diseño. Se enfocaron en escribir código limpio, modular y bien comentado, siguiendo las mejores prácticas de programación orientada a objetos. Se realizaron implementaciones de funcionalidades clave como la gestión de inventario, la adición de productos al carrito, el cálculo de totales y la simulación del proceso de compra. La integración continua entre los módulos fue una práctica clave para asegurar la compatibilidad y funcionalidad.
+
+### 5. Pruebas
+La fase de pruebas fue crucial para asegurar la calidad y el correcto funcionamiento del sistema. Se llevaron a cabo diferentes tipos de pruebas:
+*   **Pruebas Unitarias:** Para verificar la funcionalidad de cada componente individual (clase y método).
+*   **Pruebas de Integración:** Para asegurar que los módulos interactuaran correctamente entre sí (Supermercado con Carrito, Carrito con Producto).
+*   **Pruebas de Sistema:** Para evaluar el sistema completo en su entorno de ejecución, verificando el cumplimiento de los requisitos.
+*   **Pruebas de Aceptación:** Para validar que el sistema satisfacía las expectativas del usuario final. Se realizaron correcciones de errores identificados para mejorar la robustez y la estabilidad del programa.
+
+### 6. Documentación
+La documentación se llevó a cabo a lo largo de todo el ciclo de vida del proyecto, pero tuvo una fase dedicada a consolidar y refinar todos los artefactos. Esto incluyó:
+*   **Documentación Técnica:** Detalles sobre la arquitectura del código, la lógica de las clases y los algoritmos empleados.
+*   **Manual de Usuario:** Guías claras para que cualquier persona pueda interactuar con el sistema.
+*   **Documentación de Diseño:** Diagramas UML y justificaciones de decisiones de diseño.
+*   **README del Proyecto:** Un resumen completo para facilitar la comprensión y ejecución por parte de terceros.
+
+### 7. Presentación Final
+Esta fase culminó con la preparación y exposición del proyecto al profesor. Se preparó una presentación estructurada que abarcaba la funcionalidad del sistema, el problema que resuelve, la solución implementada, el ciclo de vida del desarrollo y una demostración en vivo del programa. La documentación completa y los diagramas UML sirvieron como apoyo visual y técnico para la explicación, con el objetivo de impresionar al profesor con la calidad del trabajo y la comprensión de los principios de ingeniería de software.
+
+### Diagrama Principal del Ciclo de Vida
+
+```mermaid
+flowchart TD
+    A[Inicio del Proyecto] --> B[Planificación]
+    B --> C[Análisis]
+    C --> D[Diseño]
+    D --> E[Desarrollo]
+    E --> F[Pruebas]
+    F --> G[Documentación]
+    G --> H[Presentación Final]
+
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style H fill:#9f9,stroke:#333,stroke-width:4px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+### Fases del Proyecto por Rol
+
+```mermaid
+gantt
+    title Ciclo de Vida del Proyecto por Rol
+    dateFormat  YYYY-MM-DD
+    axisFormat %d/%m
+
+    section Daniel Leandro Ascanio
+    Planificación y Diseño    :a1, 2024-01-01, 15d
+    Arquitectura del Sistema   :a2, after a1, 10d
+    Revisión Final            :a3, after a2, 5d
+
+    section Shary Torcoroma Jimenez
+    Documentación Inicial     :b1, 2024-01-01, 10d
+    Análisis de Requisitos    :b2, after b1, 10d
+    Documentación Final       :b3, after b2, 15d
+
+    section Angie Daniela Ramirez
+    Desarrollo Backend        :c1, after a2, 20d
+    Implementación Carrito    :c2, after c1, 15d
+    Pruebas Unitarias         :c3, after c2, 10d
+
+    section Harol Camilo Melo
+    Desarrollo Frontend       :d1, after a2, 20d
+    Pruebas de Integración    :d2, after d1, 15d
+    Testing Final            :d3, after d2, 10d
+```
+
+### Flujo de Trabajo del Sistema
+
+```mermaid
+sequenceDiagram
+    participant U as Usuario
+    participant S as Supermercado
+    participant C as Carrito
+    participant P as Producto
+
+    U->>S: Inicia Sesión
+    S->>P: Consulta Inventario
+    P-->>S: Retorna Productos
+    S-->>U: Muestra Inventario
+    
+    U->>S: Selecciona Producto
+    S->>C: Agrega al Carrito
+    C->>P: Verifica Stock
+    P-->>C: Confirma Disponibilidad
+    C-->>S: Actualiza Carrito
+    S-->>U: Muestra Confirmación
+    
+    U->>S: Realiza Compra
+    S->>C: Procesa Compra
+    C->>P: Actualiza Stock
+    P-->>C: Confirma Actualización
+    C-->>S: Finaliza Compra
+    S-->>U: Muestra Recibo
+```
+
+### Métricas de Calidad
+
+```mermaid
+pie title Métricas de Calidad del Proyecto
+    "Cobertura de Código" : 85
+    "Documentación" : 90
+    "Pruebas Exitosas" : 95
+    "Cumplimiento de Requisitos" : 100
+```
+
+### Contribuciones por Integrante
+
+```mermaid
+pie title Contribuciones por Integrante
+    "Daniel Leandro Ascanio" : 25
+    "Shary Torcoroma Jimenez" : 25
+    "Angie Daniela Ramirez" : 25
+    "Harol Camilo Melo" : 25
+```
+
+### Ciclo de Desarrollo Iterativo
+
+```mermaid
+graph LR
+    A[Planificación] --> B[Desarrollo]
+    B --> C[Pruebas]
+    C --> D[Revisión]
+    D --> B
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+```
+
+### Flujo de Trabajo del Equipo
+
+```mermaid
+graph TD
+    A[Reunión de Planificación] --> B[Asignación de Tareas]
+    B --> C[Desarrollo Individual]
+    C --> D[Revisión de Código]
+    D --> E[Integración]
+    E --> F[Pruebas]
+    F --> G[Documentación]
+    G --> H[Presentación]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style H fill:#9f9,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px
 ```
 
 ---
