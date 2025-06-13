@@ -148,7 +148,7 @@ El sistema permite:
      - Entrada/Salida estándar
 
 2. **Herramientas de Desarrollo:**
-   - IDE: IntelliJ IDEA / Eclipse / VS Code
+   - IDE: VS Code
      - Depuración integrada
      - Autocompletado
      - Refactorización
