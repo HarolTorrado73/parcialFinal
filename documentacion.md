@@ -420,6 +420,76 @@ La documentación se llevó a cabo a lo largo de todo el ciclo de vida del proye
 ### 7. Presentación Final
 Esta fase culminó con la preparación y exposición del proyecto al profesor. Se preparó una presentación estructurada que abarcaba la funcionalidad del sistema, el problema que resuelve, la solución implementada, el ciclo de vida del desarrollo y una demostración en vivo del programa. La documentación completa y los diagramas UML sirvieron como apoyo visual y técnico para la explicación, con el objetivo de impresionar al profesor con la calidad del trabajo y la comprensión de los principios de ingeniería de software.
 
+## Diagramas UML
+
+### Diagrama de Clases
+```mermaid
+classDiagram
+    class Producto {
+        -String nombre
+        -double precio
+        -int stock
+        -String categoria
+        +Producto(nombre, precio, stock, categoria)
+        +getNombre() String
+        +getPrecio() double
+        +getStock() int
+        +getCategoria() String
+        +setStock(int) void
+        +toString() String
+    }
+
+    class Carrito {
+        -List~Producto~ productos
+        -double total
+        +Carrito()
+        +agregarProducto(Producto) void
+        +mostrarCarrito() void
+        +vaciarCarrito() void
+        +getTotal() double
+    }
+
+    class Supermercado {
+        -List~Producto~ inventario
+        -Carrito carrito
+        -Scanner scanner
+        +Supermercado()
+        +iniciar() void
+        -mostrarMenu() void
+        -obtenerOpcion() int
+        -mostrarInventario() void
+        -agregarAlCarrito() void
+        -realizarCompra() void
+    }
+
+    Supermercado "1" --> "1" Carrito
+    Supermercado "1" --> "*" Producto
+    Carrito "1" --> "*" Producto
+```
+
+### Diagrama de Casos de Uso
+```mermaid
+graph TD
+    A[Usuario] --> B[Ver Inventario]
+    A --> C[Agregar al Carrito]
+    A --> D[Ver Carrito]
+    A --> E[Realizar Compra]
+    A --> F[Vaciar Carrito]
+    A --> G[Salir del Sistema]
+
+    B --> H[Mostrar Productos Disponibles]
+    C --> I[Seleccionar Producto]
+    I --> J[Verificar Stock]
+    J --> K[Actualizar Carrito]
+    D --> L[Mostrar Productos en Carrito]
+    D --> M[Mostrar Total]
+    E --> N[Confirmar Compra]
+    N --> O[Actualizar Inventario]
+    N --> P[Vaciar Carrito]
+    F --> Q[Eliminar Productos]
+```
+
+---
 
 ## Conclusión
 
